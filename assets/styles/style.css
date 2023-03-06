@@ -1,0 +1,80 @@
+.details-card{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 0.5rem;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.473);
+    max-width: 90vw;
+    margin: 1rem 0 1rem;
+    
+}
+
+.details-card-img{
+   object-fit: cover;
+   max-width: 90vw;
+   border-radius: 0.5rem 0.5rem 0 0;
+   height: 90vw;
+   
+}
+
+.details-card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vw;
+    justify-content: center;
+}
+
+.details-card-title{
+    margin: 1rem;
+    font-size: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.details-card-text{
+    margin: 0.5rem;
+    color: rgb(78, 78, 78);
+    padding-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media (min-width: 768px){
+    .details-card{
+        margin: 0;
+    }
+    .details-card-img{
+        width: 40vw ;
+        height: 40vw;
+        flex: 1;
+        border-radius: 0.5rem;
+        margin: 2rem 0.75rem 2rem 2rem;
+        border: 1px solid rgb(184, 184, 184);
+    }
+    .details-card-body{
+        min-height: 0;
+        flex: 1;
+        margin: 2rem 2rem 2rem 0.75rem;
+        border: 1px solid rgb(184, 184, 184);
+        border-radius: 0.5rem;
+        height: 40vw;       
+    }
+    .details-card-text{
+        padding: 0.5rem;
+        max-height: 40vw;
+        overflow: auto;
+    }
+}
+@media(min-width: 1024px){
+    .details-card-img{
+        height: 25vw;
+        max-width: 25vw;
+    }
+    .details-card-body{
+        height: 25vw;
+        max-width: 25vw;
+    }
+    .details-card-text{
+        max-height: 25vw;
+    }
+}
