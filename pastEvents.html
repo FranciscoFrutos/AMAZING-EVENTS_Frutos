@@ -43,7 +43,7 @@
         </nav>
     </header>
 
-    <div class="bg-body-secondary w-100 d-flex justify-content-between align-items-center px-5 py-2 py-sm-5">
+    <div class="bg-body-secondary w-100 d-flex justify-content-between align-items-center text-center px-5 py-2 py-sm-5">
         <a href="./upcomingEvents.html"><i class="bi bi-chevron-left" style="font-size: xx-large;"></i></a>
         <h1>Past events</h1>
         <a href="./contact.html"><i class="bi bi-chevron-right " style="font-size: xx-large;"></i></a>
@@ -53,23 +53,8 @@
     <div class="container-fluid p-2">
 
         <div class="d-flex flex-column flex-sm-row justify-content-between">
-            <div class="d-flex flex-row flex-wrap align-items-center p-2 flex-sm-row gap-3">
-                <div class="">
-                    <input type="checkbox" name="" id="category-1">
-                    <label for="category-1">Category</label>
-                </div>
-                <div class="">
-                    <input type="checkbox" name="" id="category-2">
-                    <label for="category-2">Category</label>
-                </div>
-                <div class="">
-                    <input type="checkbox" name="" id="category-3">
-                    <label for="category-3">Category</label>
-                </div>
-                <div class="">
-                    <input type="checkbox" name="" id="category-4">
-                    <label for="category-4">Category</label>
-                </div>
+            <div id="categories" class="d-flex flex-row flex-wrap align-items-center p-2 flex-sm-row gap-3">
+                
             </div>
             <form class="d-flex p-2">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -77,67 +62,15 @@
             </form>
         </div>
 
-        <!-- cards -->
-        <main class="d-flex flex-wrap gap-4 justify-content-center my-5">
-            <div class="card text-center" style="width: 18rem;">
-                <img src="./assets/img/Cinema.jpg" class="card-img-top h-50 object-fit-cover p-3" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Description</p>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span>Price $0000</span>
-                        <a href="#" class="btn btn-outline-dark">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <img src="./assets/img/Marathon.jpg" class="card-img-top h-50 object-fit-cover p-3" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Description</p>
-                    
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span>Price $0000</span>
-                        <a href="#" class="btn btn-outline-dark">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <img src="./assets/img/Museum_Tour.jpg" class="card-img-top h-50 object-fit-cover p-3" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Description</p>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span>Price $0000</span>
-                        <a href="#" class="btn btn-outline-dark">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <img src="./assets/img/Costume_Party.jpg" class="card-img-top h-50 object-fit-cover p-3" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Description</p>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span>Price $0000</span>
-                        <a href="#" class="btn btn-outline-dark">Details</a>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <!-- cards -->
+    <main id="events-past" class="d-flex flex-wrap gap-4 justify-content-center my-5">  
+    </main>
 
     </div>
 
     <!-- footer -->
-    <footer class="mt-auto p-2 container-fluid d-flex justify-content-between bg-body-secondary align-items-center px-3 py-2">
+    <footer
+        class="mt-auto p-2 container-fluid d-flex justify-content-between bg-body-secondary align-items-center px-3 py-2">
         <div class="d-flex gap-2">
             <a href="#" class="rounded-circle bg-light px-1"><i class="bi bi-instagram text-danger-emphasis"></i></a>
             <a href="#" class="rounded-circle bg-light px-1"><i class="bi bi-facebook"></i></a>
@@ -146,6 +79,8 @@
         <h3>FE13-TN</h3>
     </footer>
 
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets//scripts/pastEvents.js"></script>
 </body>
 
 </html>
