@@ -39,6 +39,45 @@
     text-justify: inter-word;
 }
 
+
+.navbar{
+    background-color: black;
+}
+.navbar a, .navigation>a, .navigation, .card-footer{
+    color: white;
+    font-weight: 600;
+}
+.navbar a:hover{
+    list-style: none;
+    color:#d80368;
+}
+
+
+.navigation{
+    background-color: #d80368;
+}
+
+body{
+    background-color: #ebf5ee;
+    font-family: 'Helvetica Neue', sans-serif;
+    
+}
+
+
+
+.footer{
+    background-color: #f8c0c8;
+}
+
+.card-footer{
+    background-color: #3b429f;
+    
+}
+
+
+
+
+
 @media (min-width: 768px){
     .details-card{
         margin: 0;
@@ -77,4 +116,8 @@
     .details-card-text{
         max-height: 25vw;
     }
+    .navigation h1{
+        font-size: 4rem;
+    }
 }
+

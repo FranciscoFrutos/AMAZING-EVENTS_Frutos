@@ -209,7 +209,7 @@ function getCardTemplate(event){
         <div class="card-footer">
             <div class="d-flex justify-content-between align-items-center">
                 <span>Price $${event.price}</span>
-                <a href="./details.html" class="btn btn-outline-dark">Details</a>
+                <a href="./details.html" class="btn btn-outline-light">Details</a>
             </div>
         </div>
     </div>`;
