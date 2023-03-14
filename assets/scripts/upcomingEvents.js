@@ -1,13 +1,13 @@
-function getUpcomingEvents(event, cards) {
-
+function isUpcomingEvent(event) {
     let currentDate = Date.parse(data.currentDate);
     let eventDate = Date.parse(event.date);
-    if (eventDate > currentDate) {
-        appendEvent(event, cards)
-    }
+    return eventDate < currentDate
 }
 
+let filteredEvents = data.events.filter(event => isUpcomingEvent(event))
 
-createCard(data, "events-upcoming", getUpcomingEvents);
+createCategories(data);
+addEventFilters(filteredEvents);
 
-createCategories(data)
+createCards(filteredEvents);
+

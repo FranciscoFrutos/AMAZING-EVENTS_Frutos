@@ -1,12 +1,11 @@
-function getPastEvents(event, cards) {
-
+function isPastEvent(event) {
     let currentDate = Date.parse(data.currentDate);
     let eventDate = Date.parse(event.date);
-    if (eventDate > currentDate) {
-        appendEvent(event, cards)
-    }
+    return eventDate > currentDate
 }
 
+let filteredEvents = data.events.filter(event => isPastEvent(event))
 
 createCategories(data);
-createCard(data, "events-past", getPastEvents);
+addEventFilters(filteredEvents);
+createCards(filteredEvents);
