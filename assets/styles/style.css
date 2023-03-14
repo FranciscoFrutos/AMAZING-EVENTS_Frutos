@@ -1,4 +1,4 @@
-.details-card{
+/* .details-card{
     display: flex;
     align-items: center;
     border: 1px solid rgb(184, 184, 184);
@@ -120,4 +120,78 @@ body{
         font-size: 4rem;
     }
 }
+ */
 
+
+/* estilo general del sitio */
+.navbar{
+    background-color: black;
+}
+.navbar a, .navigation>a, .navigation, .card-footer{
+    color: white;
+    font-weight: 600;
+}
+.navbar a:hover{
+    list-style: none;
+    color:#d80368;
+}
+
+
+.navigation{
+    background-color: #d80368;
+}
+
+body{
+    background-color: #ebf5ee;
+    font-family: 'Helvetica Neue', sans-serif;
+    
+}
+
+.footer{
+    background-color: #f8c0c8;
+}
+
+.card-footer{
+    background-color: #3b429f;
+    
+}
+
+/* estilo de la tarjeta de detalles */
+*{
+    box-sizing: border-box;
+}
+.details-card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    background-color: #3b429f;
+    color: rgb(255, 255, 255);
+}
+.details-card-img{
+    max-width: 100%;
+}
+.details-card-body{
+    margin: 1rem;
+}
+.bold{
+    font-weight: 600;
+}
+.details-card-title{
+    font-size: 2rem;
+    margin-top: 1rem;
+
+}
+
+@media(min-width:768px){
+    .details-card{
+        flex-direction: row;
+        margin: 2rem 0 2rem;
+        border-radius: 1rem;
+        
+    }
+    .details-card-img{
+        max-width: 50vw;
+        object-fit: cover;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
