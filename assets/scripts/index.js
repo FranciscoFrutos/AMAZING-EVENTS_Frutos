@@ -1,15 +1,10 @@
-function createCards(eventsList, selectedCategories = []) {
-    let htmlElement = document.getElementById('events');
-    htmlElement.innerHTML = '';
-    let filteredEvents = eventsList.filter(event =>
-        selectedCategories.length === 0
-        || selectedCategories.includes(event.category));
-    filteredEvents.forEach(element => {
-        let cardTemplate = getCardTemplate(element);
-        htmlElement.innerHTML += cardTemplate;
-    });
-}
-createCategories(data);
+async function getData() {
+    const response = await fetch('https://mindhub-xj03.onrender.com/api/amazing');
+    data = await response.json();
+    createCategories(data);
+    addEventFilters(data.events);
+    createCards(data.events);
+    
+  }
 
-addEventFilters(data.events);
-createCards(data.events);
+getData()
