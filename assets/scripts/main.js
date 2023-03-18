@@ -20,6 +20,12 @@ function createID(text) {
     return text.toLowerCase().replace(/\s+/g, "-");
 }
 
+function isUpcomingEvent(event) {
+    let currentDate = Date.parse(data.currentDate);
+    let eventDate = Date.parse(event.date);
+    return eventDate > currentDate
+}
+
 function createCategories(eventsData) {
 
     let categoriesElement = document.querySelector('#categories')

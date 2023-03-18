@@ -17,7 +17,7 @@ function getDetails(){
         <p><span class="bold">Place: </span> ${eventObject.place}</p>
         <p><span class="bold">Date: </span> ${eventObject.date}</p>
         <p><span class="bold">Capacity: </span> ${eventObject.capacity}</p>
-        <p><span class="bold">Assistance: </span> ${eventObject.assistance}</p>
+        <p><span class="bold">Assistance: </span> ${eventObject.assistance||'-'}</p>
         <p><span class="bold">Price: </span> $${eventObject.price}</p>
         </p>
         </div>
