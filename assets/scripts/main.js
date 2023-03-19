@@ -2,18 +2,19 @@ let data
 
 function getCardTemplate(eventObject) {
 
-    return `<div class="card text-center" style="width: 18rem;">
-        <img src="${eventObject.image}" class="card-img-top h-50 object-fit-cover p-3" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">${eventObject.name}</h5>
-            <p class="card-text">${eventObject.description}</p>
-        </div>
-        <div class="card-footer">
+    return `<div class="card text-light">
+        <img src="${eventObject.image}" class="card-img" alt="...">
+        <div class="card-img-overlay d-flex flex-column justify-content-between">
+            <div>
+                <h5 class="card-title fw-bold">${eventObject.name}</h5>
+                <p class="card-text w-sm-75 ">${eventObject.description}</p>
+            </div>
             <div class="d-flex justify-content-between align-items-center">
-                <span>Price $${eventObject.price}</span>
-                <a href="./details.html?id=${eventObject._id}" class="btn btn-outline-light">Details</a>
+            <span class="fw-bold">Price $${eventObject.price}</span>
+            <a href="./details.html?id=${eventObject._id}" class="card-details fw-bold btn btn-dark">Details</a>
             </div>
         </div>
+        
     </div>`;
 }
 function createID(text) {
@@ -44,7 +45,7 @@ function createCategories(eventsData) {
 
 
 
-function createCards(eventsData, selectedCategories = []) {
+function createCards(eventsData) {
     let htmlElement = document.getElementById('events')
     if(eventsData.length == 0){
         htmlElement.innerHTML = '<p>No events found.</p>'
@@ -69,13 +70,9 @@ function filters(eventsData){
 }
 
 function addEventFilters(eventsData){
-    let searchButton = document.querySelector('#searchSubmit')
     let input = document.querySelector('#searchInput')
     let checkboxes = document.getElementById("categories");
     input.addEventListener('input',filters.bind(null, eventsData))
-    searchButton.addEventListener('click', function(event){
-        event.preventDefault();
-    })
     checkboxes.addEventListener('change',filters.bind(null, eventsData))
 }
 
@@ -95,5 +92,4 @@ function filterByCategory(eventsData){
     let filteredList = eventsData.filter(element => checkValues.includes(createID(element.category)))
     return filteredList
 }
-
 

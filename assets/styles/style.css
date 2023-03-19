@@ -1,174 +1,128 @@
-/* .details-card{
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(184, 184, 184);
-    border-radius: 0.5rem;
-    flex-wrap: wrap;
-    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.473);
-    max-width: 90vw;
-    margin: 1rem 0 1rem;
-    
-}
-
-.details-card-img{
-   object-fit: cover;
-   max-width: 90vw;
-   border-radius: 0.5rem 0.5rem 0 0;
-   height: 90vw;
-   
-}
-
-.details-card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 90vw;
-    justify-content: center;
-}
-
-.details-card-title{
-    margin: 1rem;
-    font-size: 2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.details-card-text{
-    margin: 0.5rem;
-    color: rgb(78, 78, 78);
-    padding-bottom: 2rem;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
-.navbar{
-    background-color: black;
-}
-.navbar a, .navigation>a, .navigation, .card-footer{
-    color: white;
-    font-weight: 600;
-}
-.navbar a:hover{
-    list-style: none;
-    color:#d80368;
-}
-
-
-.navigation{
-    background-color: #d80368;
-}
-
-body{
-    background-color: #ebf5ee;
-    font-family: 'Helvetica Neue', sans-serif;
-    
-}
-
-
-
-.footer{
-    background-color: #f8c0c8;
-}
-
-.card-footer{
-    background-color: #3b429f;
-    
-}
-
-
-
-
-
-@media (min-width: 768px){
-    .details-card{
-        margin: 0;
-    }
-    .details-card-img{
-        width: 40vw ;
-        height: 40vw;
-        flex: 1;
-        border-radius: 0.5rem;
-        margin: 2rem 0.75rem 2rem 2rem;
-        border: 1px solid rgb(184, 184, 184);
-    }
-    .details-card-body{
-        min-height: 0;
-        flex: 1;
-        margin: 2rem 2rem 2rem 0.75rem;
-        border: 1px solid rgb(184, 184, 184);
-        border-radius: 0.5rem;
-        height: 40vw;       
-    }
-    .details-card-text{
-        padding: 0.5rem;
-        max-height: 40vw;
-        overflow: auto;
-    }
-}
-@media(min-width: 1024px){
-    .details-card-img{
-        height: 25vw;
-        max-width: 25vw;
-    }
-    .details-card-body{
-        height: 25vw;
-        max-width: 25vw;
-    }
-    .details-card-text{
-        max-height: 25vw;
-    }
-    .navigation h1{
-        font-size: 4rem;
-    }
-}
- */
-
-
-/* estilo general del sitio */
-.navbar{
-    background-color: black;
-}
-.navbar a, .navigation>a, .navigation, .card-footer{
-    color: white;
-    font-weight: 600;
-}
-.navbar a:hover{
-    list-style: none;
-    color:#d80368;
-}
-
-
-.navigation{
-    background-color: #d80368;
-}
-
-body{
-    background-color: #ebf5ee;
-    font-family: 'Helvetica Neue', sans-serif;
-    
-}
-
-.footer{
-    background-color: #f8c0c8;
-}
-
-.card-footer{
-    background-color: #3b429f;
-    
-}
-
-/* estilo de la tarjeta de detalles */
 *{
     box-sizing: border-box;
 }
+
+/* HEADER */
+
+nav{
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem ;
+}
+
+#filtersButton, #menuButton{
+    order: 1;
+    z-index: 2;
+}
+
+
+#filters, #menu{
+    position: fixed;
+    top: 0;    
+    width: 75vw;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    
+}
+#menu a{
+    padding-left: 1rem;
+}
+#filters{
+    left: -75vw;
+}
+#menu{
+    right: -75vw;
+}
+#filters.show{
+    left: 0;
+}
+#menu.show{
+    right:0
+}
+
+.current{
+    background-color: rgb(112, 112, 112);
+}
+
+#logo{
+    order: 2;
+}
+#logo > img{
+    height: 1.5rem;
+}
+#menuButton{
+    order: 3;
+}
+#filtersButton > button, #menuButton > button{
+    border-style: none;
+    background-color: transparent;
+    color: white;   
+}
+#filtersButton > button:hover, #menuButton > button:hover{
+    color:#d80368;  
+}
+
+.navigation{
+    background-color: rgb(0, 0, 0);
+}
+
+.navigation>a, .navigation, h1{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: small;
+    margin: 0;
+}
+.navigation>a:hover{
+    color:#d80368;
+}
+
+
+
+.card{
+    border-radius: 0;
+    margin-bottom: 0.25rem;
+    height: 60vw;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+.card-img{
+    object-fit: cover;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.card-details{
+    background-color: rgba(0, 0, 0, 0.644);
+    border: none;
+    
+}
+
+body{
+    background-color: #414141;
+    font-family: 'Helvetica Neue', sans-serif;
+    
+}
+
+.footer{
+    background-color: rgb(27, 27, 27);
+}
+
+/* estilo de la tarjeta de detalles */
 .details-card{
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
-    background-color: #3b429f;
+    background-color: #00000079;
     color: rgb(255, 255, 255);
 }
 .details-card-img{
     max-width: 100%;
+    object-fit: cover;
 }
 .details-card-body{
     margin: 1rem;
@@ -181,8 +135,30 @@ body{
     margin-top: 1rem;
 
 }
-
+@media(min-width:425px){
+    .card-text{
+        padding-right: 50%;
+    }
+}
 @media(min-width:768px){
+
+    .navigation>a, .navigation, h1{
+        font-size: large;     
+    }
+
+    .card{
+        width: 50%;
+        height: 30vw;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    .card-title{
+        min-height: 2rem;
+    }
+    .card-text{
+        padding-right: 25%;
+    }
+
     .details-card{
         flex-direction: row;
         margin: 2rem 0 2rem;
@@ -193,5 +169,59 @@ body{
         max-width: 50vw;
         object-fit: cover;
         border-radius: 1rem 0 0 1rem;
+    }
+    #filters{
+        left: -50vw;
+        width: 50vw;
+    }
+    #menu{
+        right: -50vw;
+        width: 50vw;
+    }
+}
+
+@media(min-width:1024px){
+    .card{
+        width: 25%;
+        height: 30vw;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }  
+    .card-title{
+        min-height: 4rem;
+    }
+    .card-text{
+        padding-right: 0;
+    }
+    #filters{
+        left: -25vw;
+        width: 25vw;
+    }
+    #menu{
+        right: -25vw;
+        width: 25vw;
+    }
+    
+}
+@media(min-width:1440px){
+    .card{
+        width: 20%;
+        height: 14vw;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }  
+    .card-title{
+        min-height: 2rem;
+    }
+    .card-text{
+        padding-right: 0;
+    }
+    #filters{
+        left: -20vw;
+        width: 20vw;
+    }
+    #menu{
+        right: -20vw;
+        width: 20vw;
     }
 }
