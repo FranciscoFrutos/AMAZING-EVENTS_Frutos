@@ -197,12 +197,58 @@ body{
         left: -25vw;
         width: 25vw;
     }
+    
+    /* Desktop filtros y nav */
+ 
     #menu{
-        right: -25vw;
-        width: 25vw;
+        right: auto;
+        width: auto;
+        order: 2;
     }
     
+    #filtersButton, #menuButton{
+        display: none;
+    }
+      
+    #filters, #menu{
+        position: relative;
+        top: auto;    
+        width: auto;
+        height: auto;
+        z-index: auto;
+        
+    }
+    #categories{
+        display: flex;
+        flex-wrap: 1;
+        width: 50%;
+        order: 1;
+        flex: 2;
+    }
+    #filters .input-group{
+        order: 2;
+        flex: 1;
+    }
+    #menu a{
+        padding-left: 0;   
+    }
+    #filters{
+        left: auto;
+    }
+    #menu .navbar-nav{
+        display: flex;
+        flex-direction: row;
+    }
+    #menu a{
+        padding: 0 1rem;
+    }
+    #logo{
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
 }
+
 @media(min-width:1440px){
     .card{
         width: 20%;
@@ -215,13 +261,5 @@ body{
     }
     .card-text{
         padding-right: 0;
-    }
-    #filters{
-        left: -20vw;
-        width: 20vw;
-    }
-    #menu{
-        right: -20vw;
-        width: 20vw;
     }
 }
